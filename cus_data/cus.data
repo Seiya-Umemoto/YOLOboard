@@ -1,0 +1,5 @@
+classes = 1
+train = cus_data/cus_training.txt
+valid = cus_data/cus_testing.txt
+names = cus_data/cus.names
+backup = backup
