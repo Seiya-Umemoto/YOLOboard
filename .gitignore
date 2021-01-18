@@ -55,3 +55,6 @@ include/darknet/
 uselib
 uselib_track
 darknet
+
+# weights files
+*.conv.*

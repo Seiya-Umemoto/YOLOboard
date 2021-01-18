@@ -1,0 +1,5 @@
+classes = 1
+train = lid_data/lid_training.txt
+valid = lid_data/lid_testing.txt
+names = lid_data/lid.names
+backup = lid_data/backup

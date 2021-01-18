@@ -1,0 +1,18 @@
+ CUDNN_HALF=1 
+net.optimized_memory = 0 
+mini_batch = 1, batch = 64, time_steps = 1, train = 0 
+nms_kind: greedynms (1), beta = 0.600000 
+nms_kind: greedynms (1), beta = 0.600000 
+nms_kind: greedynms (1), beta = 0.600000 
+
+ seen 64, trained: 224 K-images (3 Kilo-batches_64) 
+ Detection layer: 139 - type = 28 
+ Detection layer: 150 - type = 28 
+ Detection layer: 161 - type = 28 
+can_data/test_images/2_Color.png: Predicted in 7.682000 milli-seconds.
+toreta: 100%
+toreta: 99%
+coke: 100%
+sprite: 100%
+coke: 100%
+sprite: 100%
