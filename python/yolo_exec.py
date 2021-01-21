@@ -7,15 +7,12 @@ start_date_time = start.strftime("%Y-%m-%d_%H:%M:%S")
 
 os.chdir('..')
 
-process = subprocess.Popen(['./darknet','detector','train','can_data/can.data',
+process = subprocess.Popen(['./darknet','detector','train','can_data2/can.data',
         'cfg/yolov4-custom.cfg','yolov4.conv.137','-dont_show','-map'],
         stdout=subprocess.PIPE,
         universal_newlines=True)
 
-if os.path.exists("python/train_log.txt"):
-    os.remove("python/train_log.txt")
-
-with open("python/train_log.txt", "a+") as f:
+with open("python/train_log2.txt", "w+") as f:
     while True:
         output = process.stdout.readline()
         f.write(output)
@@ -34,4 +31,8 @@ end_date_time = end.strftime("%Y-%m-%d_%H:%M:%S")
 duration = end - start
 duration = duration - timedelta(microseconds=duration.microseconds)
 
-print("start:", start_date_time + ",", "end:", end_date_time + ",", "duration:", duration)
+# with open으로 로그 파엘에 입력
+result = "start: " + start_date_time + ", " + "end: " + end_date_time + ", " + "duration: " + str(duration)
+print(result)
+with open("python/train_log2.txt", "a+") as f:
+    f.write(result)

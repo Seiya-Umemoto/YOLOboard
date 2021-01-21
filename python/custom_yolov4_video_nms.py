@@ -8,7 +8,7 @@ import numpy as  np
 import cv2
 
 #get the webcam video stream
-file_video_stream = cv2.VideoCapture('images/testing/cov_video.mp4')
+file_video_stream = cv2.VideoCapture('/home/seiya/yoloboard/can_data2/test_videos/test_can_detection_v2.mp4')
 
 #create a while loop 
 while (file_video_stream.isOpened):
@@ -26,10 +26,10 @@ while (file_video_stream.isOpened):
     #accepted sizes are 320×320,416×416,609×609. More size means more accuracy but less speed
     
     # only single label 
-    class_labels = ["corona_virus"]
+    class_labels = ["coke","sprite","toreta"]
     
     #Declare only a single color
-    class_colors = ["0,255,0"]
+    class_colors = ["0,255,0","255,0,0","0,0,255"]
     class_colors = [np.array(every_color.split(",")).astype("int") for every_color in class_colors]
     class_colors = np.array(class_colors)
     class_colors = np.tile(class_colors,(1,1))
@@ -37,7 +37,7 @@ while (file_video_stream.isOpened):
     # Loading the coronavirus custom model 
     # input preprocessed blob into model and pass through the model
     # obtain the detection predictions by the model using forward() method
-    yolo_model = cv2.dnn.readNetFromDarknet('model/cov_yolov4.cfg','model/cov_yolov4_best.weights')
+    yolo_model = cv2.dnn.readNetFromDarknet('/home/seiya/yoloboard/cfg/yolov4-custom.cfg','/home/seiya/yoloboard/can_data/backup/yolov4-custom_best.weights')
     
     # Get all layers from the yolo network
     # Loop and find the last layer (output layer) of the yolo network 

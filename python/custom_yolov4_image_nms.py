@@ -7,9 +7,9 @@
 import numpy as  np
 import cv2
 
-# load the image to detect, get width, height 
+# load the image to detect, get width, height
 
-img_to_detect = cv2.imread('/home/seiya/yoloboard/lid_data/final_test_images3/9_Color.jpg')
+img_to_detect = cv2.imread('/home/seiya/yoloboard/can_data2/test_images/1.jpg')
 img_height = img_to_detect.shape[0]
 img_width = img_to_detect.shape[1]
 
@@ -19,10 +19,10 @@ img_blob = cv2.dnn.blobFromImage(img_to_detect, 0.003922, (416, 416), swapRB=Tru
 #accepted sizes are 320×320,416×416,608×608. More size means more accuracy but less speed
 
 # only single label 
-class_labels = ["lid"]
+class_labels = ["coke","sprite","toreta"]
 
 #Declare only a single color
-class_colors = ["0,255,0"]
+class_colors = ["0,255,0","255,0,0","0,0,255"]
 class_colors = [np.array(every_color.split(",")).astype("int") for every_color in class_colors]
 class_colors = np.array(class_colors)
 class_colors = np.tile(class_colors,(1,1))
@@ -30,7 +30,7 @@ class_colors = np.tile(class_colors,(1,1))
 # Loading the coronavirus custom model 
 # input preprocessed blob into model and pass through the model
 # obtain the detection predictions by the model using forward() method
-yolo_model = cv2.dnn.readNetFromDarknet('/home/seiya/yoloboard/cfg/yolov4-custom.cfg','/home/seiya/yoloboard/lid_data/backup/yolov4-custom_best.weights')
+yolo_model = cv2.dnn.readNetFromDarknet('/home/seiya/yoloboard/cfg/yolov4-custom.cfg','/home/seiya/yoloboard/can_data2/backup/yolov4-custom_best.weights')
 
 # Get all layers from the yolo network
 # Loop and find the last layer (output layer) of the yolo network 
@@ -118,5 +118,6 @@ for max_valueid in max_value_ids:
     cv2.rectangle(img_to_detect, (start_x_pt, start_y_pt), (end_x_pt, end_y_pt), box_color, 1)
     cv2.putText(img_to_detect, predicted_class_label, (start_x_pt, start_y_pt-5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, box_color, 1)
 
-cv2.imshow("Detection Output", img_to_detect)
-cv2.waitKey(0)
+# cv2.imshow("Detection Output", img_to_detect)
+# cv2.waitKey(0)
+cv2.imwrite("prediction.jpg", img_to_detect)
