@@ -19,3 +19,9 @@ Development Environment:
 * Backend(Restful API): Django
 * Database: MySQL
 * Container: Docker
+
+## Link
+**Link:**
+* [PowerPoint slides(yoloboard)](https://sunmoonackr-my.sharepoint.com/:p:/g/personal/seiyau77_sunmoon_ac_kr/ERfVAp-1BXJAqYpK_wswlIYBVwwy6LS4zdois3FBiSDRUA?e=Rkdl25)
+* [PowerPoint slides(cup detection)(editing)](https://sunmoonackr-my.sharepoint.com/:p:/g/personal/seiyau77_sunmoon_ac_kr/Ed-es5QRBnFJvXprP2RMAfoBH8AW98cdWWBB7y6PK6hXfA?e=DFfVXi)
+* [PowerPoint slides(can detection)](https://sunmoonackr-my.sharepoint.com/:p:/g/personal/seiyau77_sunmoon_ac_kr/EYuqX_OMgY1Ar3BlJEYu-t8BLCTnE1GQyhDY6s-q5OTccQ?e=WqjctJ)
