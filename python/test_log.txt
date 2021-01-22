@@ -9,4 +9,16 @@ nms_kind: greedynms (1), beta = 0.600000
  Detection layer: 139 - type = 28 
  Detection layer: 150 - type = 28 
  Detection layer: 161 - type = 28 
-can_data2/test_videos/test_can_detection_v2.mp4: Predicted in 7.637000 milli-seconds.
+can_data2/test_images/1.jpg: Predicted in 7.680000 milli-seconds.
+sprite: 81%
+coke: 98%
+coke: 91%
+sprite: 81%
+toreta: 96%
+toreta: 84%
+coke: 89%
+coke: 90%
+toreta: 94%
+coke: 91%
+toreta: 95%
+coke: 99%

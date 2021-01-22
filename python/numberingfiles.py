@@ -3,13 +3,15 @@ import cv2
 import os
 import re
 
-files = glob('/home/seiya/yoloboard/can_data2/test_images/*.jpg')
+files = glob('/home/seiya/yoloboard/can_data3/valid_images/*.jpg')
 
 dirname = os.path.dirname(files[0])
 
 files = sorted(files, key=lambda file: int(re.findall("[0-9]+", file)[1]))
 
-print(dirname)
+# print(dirname)
+# for file in files:
+#     print(file)
 
 num = 1
 for file in files:

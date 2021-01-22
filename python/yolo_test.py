@@ -4,7 +4,7 @@ import os
 os.chdir('..')
 
 process = subprocess.Popen(['./darknet','detector','test','can_data2/can.data','cfg/yolov4-custom.cfg',
-        'can_data2/backup/yolov4-custom_best.weights','can_data2/test_videos/test_can_detection_v2.mp4'],
+        'can_data2/backup/yolov4-custom_best.weights','can_data2/test_images/1.jpg','-thresh', '0.8'],
         stdout=subprocess.PIPE,
         universal_newlines=True)
 
