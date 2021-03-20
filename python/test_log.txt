@@ -5,20 +5,23 @@ nms_kind: greedynms (1), beta = 0.600000
 nms_kind: greedynms (1), beta = 0.600000 
 nms_kind: greedynms (1), beta = 0.600000 
 
- seen 64, trained: 64 K-images (1 Kilo-batches_64) 
+ seen 64, trained: 115 K-images (1 Kilo-batches_64) 
  Detection layer: 139 - type = 28 
  Detection layer: 150 - type = 28 
  Detection layer: 161 - type = 28 
-can_data2/test_images/1.jpg: Predicted in 7.680000 milli-seconds.
-sprite: 81%
-coke: 98%
-coke: 91%
-sprite: 81%
-toreta: 96%
-toreta: 84%
-coke: 89%
-coke: 90%
-toreta: 94%
-coke: 91%
-toreta: 95%
-coke: 99%
+can_data3/test_images/8.jpg: Predicted in 7.685000 milli-seconds.
+toreta: 100%
+toreta: 100%
+cola: 100%
+cola: 99%
+cola: 98%
+cola: 100%
+sprite: 99%
+toreta: 100%
+toreta: 100%
+toreta: 100%
+cola: 99%
+sprite: 100%
+toreta: 99%
+sprite: 99%
+toreta: 78%

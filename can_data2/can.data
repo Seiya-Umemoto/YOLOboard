@@ -1,5 +1,0 @@
-classes = 3
-train = can_data2/can_training.txt
-valid = can_data2/can_validating.txt
-names = can_data2/can.names
-backup = can_data2/backup

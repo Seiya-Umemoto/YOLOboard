@@ -9,7 +9,7 @@ import cv2
 
 # load the image to detect, get width, height
 
-img_to_detect = cv2.imread('/home/seiya/yoloboard/can_data2/test_images/1.jpg')
+img_to_detect = cv2.imread('/home/seiya/yoloboard/can_data3/test_images/9.png')
 img_height = img_to_detect.shape[0]
 img_width = img_to_detect.shape[1]
 
@@ -30,7 +30,7 @@ class_colors = np.tile(class_colors,(1,1))
 # Loading the coronavirus custom model 
 # input preprocessed blob into model and pass through the model
 # obtain the detection predictions by the model using forward() method
-yolo_model = cv2.dnn.readNetFromDarknet('/home/seiya/yoloboard/cfg/yolov4-custom.cfg','/home/seiya/yoloboard/can_data2/backup/yolov4-custom_best.weights')
+yolo_model = cv2.dnn.readNetFromDarknet('/home/seiya/yoloboard/cfg/yolov4-custom.cfg','/home/seiya/backup_yoloboard/can_third/can_data3/backup/yolov4-custom_best.weights')
 
 # Get all layers from the yolo network
 # Loop and find the last layer (output layer) of the yolo network 
@@ -64,7 +64,7 @@ for object_detection_layer in obj_detection_layers:
         prediction_confidence = all_scores[predicted_class_id]
     
         # take only predictions with confidence more than 20%
-        if prediction_confidence > 0.20:
+        if prediction_confidence > 0.70:
             #get the predicted label
             predicted_class_label = class_labels[predicted_class_id]
             #obtain the bounding box co-oridnates for actual image from resized image size
@@ -121,3 +121,5 @@ for max_valueid in max_value_ids:
 # cv2.imshow("Detection Output", img_to_detect)
 # cv2.waitKey(0)
 cv2.imwrite("prediction.jpg", img_to_detect)
+
+cv2.destroyAllWindows()

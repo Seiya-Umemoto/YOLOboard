@@ -2,10 +2,13 @@ from glob import glob
 import os
 import re
 
-files = glob("/home/seiya/yoloboard/can_data2/valid_images/*.jpg")
+files = glob("/home/seiya/yoloboard/glinder_data/valid_images/*.jpg")
 
-files = sorted(files, key=lambda file: int(re.findall("[0-9]+", file)[1]))
+try:
+    files = sorted(files, key=lambda file: int(re.findall("[0-9]+", file)[-1]))
+except IndexError:
+    print("check the names of the images")
 
-with open('/home/seiya/yoloboard/can_data2/can_validating.txt', 'w') as f:
+with open('/home/seiya/yoloboard/glinder_data/glinder_valid.txt', 'w+') as f:
     for file in files:
-        f.write("%s\n" % file)
+        f.write(f"{file}{os.linesep}")

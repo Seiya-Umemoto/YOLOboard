@@ -1,0 +1,6 @@
+/home/seiya/yoloboard/beer_data/valid_images/1.jpg
+/home/seiya/yoloboard/beer_data/valid_images/2.jpg
+/home/seiya/yoloboard/beer_data/valid_images/3.jpg
+/home/seiya/yoloboard/beer_data/valid_images/4.jpg
+/home/seiya/yoloboard/beer_data/valid_images/5.jpg
+/home/seiya/yoloboard/beer_data/valid_images/6.jpg

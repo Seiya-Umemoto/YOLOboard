@@ -1,0 +1,5 @@
+classes = 3
+train = can_data3/can_train.txt
+valid = can_data3/can_valid.txt
+names = can_data3/can.names
+backup = can_data3/backup
